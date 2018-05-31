@@ -7,10 +7,11 @@ import (
 
 	"github.com/crackitty/gophercon_day1/cmd/routing"
 	"github.com/crackitty/gophercon_day1/cmd/webserver"
+	"github.com/crackitty/gophercon_day1/version"
 )
 
 func main() {
-	log.Printf("Service is starting")
+	log.Printf("Service is starting. Version: %s built: %s", version.Release, version.BuildTime)
 
 	port := os.Getenv("SERVICE_PORT")
 
