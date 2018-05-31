@@ -20,5 +20,8 @@ build: clean
 		-X ${PROJECT}/version.BuildTime=${BUILD_TIME}" \
 		-o ./bin/${APP} ${PROJECT}/cmd/gophercon
 
+run: build
+	PORT=${PORT} ./bin/${APP}
+	
 test: 
 	go test -race ./...
